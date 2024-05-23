@@ -1,0 +1,56 @@
+/* Estilo general de la aplicación */
+.root {
+    -fx-background-color: #F0F0F0; /* Fondo gris claro */
+    -fx-font-family: "Arial";
+}
+
+.label {
+    -fx-text-fill: #333333; /* Color del texto de las etiquetas */
+}
+
+.text-field, .password-field, .text-area {
+    -fx-background-color: #FFFFFF; /* Fondo blanco para los campos de texto */
+    -fx-border-color: #CCCCCC; /* Borde gris claro */
+    -fx-border-radius: 5px; /* Bordes redondeados */
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+.text-area {
+    -fx-background-insets: 0; /* Para que el área de texto se vea uniforme */
+    -fx-wrap-text: true;
+}
+
+.button {
+    -fx-background-color: #4CAF50; /* Fondo verde */
+    -fx-text-fill: white; /* Texto blanco */
+    -fx-font-size: 12   px;
+    -fx-padding: 10px 20px; /* Espaciado interno */
+    -fx-background-radius: 5px; /* Bordes redondeados */
+}
+
+.button:hover {
+    -fx-background-color: #45A049; /* Fondo verde oscuro al pasar el mouse */
+}
+
+.button:pressed {
+    -fx-background-color: #388E3C; /* Fondo verde aún más oscuro al presionar */
+}
+
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 5, 0, 0, 1); /* Sombra para la imagen */
+}
+
+.pane {
+    -fx-padding: 20px; /* Padding alrededor del contenido */
+}
+
+.anchor-pane {
+    -fx-padding: 10px;
+}
+
+.title-label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}

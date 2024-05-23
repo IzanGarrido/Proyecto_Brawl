@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="400.0" prefWidth="600.0" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="izangq.BrawlersController">
+   <children>
+      <SplitMenuButton fx:id="sesionActual" layoutX="450.0" layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="150.0" minWidth="150.0" mnemonicParsing="false" text="Sesion">
+        <items>
+          <MenuItem fx:id="cerrarSesionButton" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar Sesión.." />
+        </items>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </SplitMenuButton>
+      <AnchorPane layoutX="-4.099999904632568" layoutY="-4.099999904632568">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="5.099999904632568" layoutY="4.099999904632568" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Logo.jpg" />
+               </image>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Pane>
+               <children>
+                  <Button layoutX="4.099999904632568" layoutY="3.0999999046325684" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#volverAPrincipal" opacity="0.0" prefHeight="30.0" prefWidth="30.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <ComboBox fx:id="anadirbrawlers" editable="true" layoutX="34.0" layoutY="5.0" prefHeight="30.0" prefWidth="172.0" />
+
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="6.0" layoutY="44.0">
+         <children>
+            <ImageView fx:id="brawlerFoto" fitHeight="350.0" fitWidth="230.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="257.0" text="Nombre:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="256.0" layoutY="41.0" text="Calidad:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="255.0" layoutY="77.0" text="Mejor mapa:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="256.0" layoutY="128.0" text="Numero de Aspectos:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="258.0" layoutY="167.0" text="Origen:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="Nombre" layoutX="333.0" prefHeight="20.0" prefWidth="213.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="Calidad" layoutX="333.0" layoutY="41.0" prefHeight="20.0" prefWidth="213.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="Mapa" alignment="TOP_LEFT" layoutX="345.0" layoutY="77.0" prefHeight="42.0" prefWidth="213.0" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="Aspectos" layoutX="403.0" layoutY="128.0" prefHeight="20.0" prefWidth="49.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="Origen" alignment="TOP_LEFT" layoutX="322.0" layoutY="167.0" prefHeight="170.0" prefWidth="260.0" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
