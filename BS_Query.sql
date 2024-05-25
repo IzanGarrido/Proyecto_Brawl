@@ -32,15 +32,15 @@ CREATE TABLE IF NOT EXISTS `Brawl_Stars`.`Brawlers` (
 );
 
 CREATE TABLE IF NOT EXISTS `Brawl_Stars`.`Usuarios` (
-    `IdUsuario` INT NOT NULL AUTO_INCREMENT,
-    `Usuario` VARCHAR(40) NULL,
-    `Contrasena` VARCHAR(40) NULL,
-    /*`IdBrawler` INT NULL,
-    `IdMapa` INT NULL,*/
-    PRIMARY KEY (`IdUsuario`)/*,*/
-    /*FOREIGN KEY (`IdMapa`) REFERENCES Mapas(`IdMapa`),
-    FOREIGN KEY (`IdBrawler`) REFERENCES Brawlers(`IdBrawler`)*/
-);
+    IdUsuario INT NOT NULL AUTO_INCREMENT, 
+    Usuario VARCHAR(40) NULL, 
+    Contrasena VARCHAR(40) NULL, 
+    Nombre VARCHAR(40) NULL, 
+    Apellidos VARCHAR(40) NULL, 
+    Email VARCHAR(40) NULL, 
+    Telefono VARCHAR(40) NULL, 
+    PRIMARY KEY (IdUsuario)
+    );
 
 INSERT INTO Calidades (Calidad)
 VALUES 

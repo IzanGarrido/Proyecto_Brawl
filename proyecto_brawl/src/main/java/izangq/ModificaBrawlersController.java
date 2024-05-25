@@ -115,14 +115,38 @@ public class ModificaBrawlersController {
         this.brawlerId = App.idBrawlerActual;
         try {
             Connection con = App.conectate();
-            String query = "SELECT Brawler FROM Brawlers WHERE IdBrawler = ?";
+            String query = "SELECT Brawler, IdCalidad, IdMapa, Aspectos, Origen FROM Brawlers WHERE IdBrawler = ?";
             PreparedStatement statement = con.prepareStatement(query);
             statement.setInt(1, brawlerId);
             ResultSet resultSet = statement.executeQuery();
 
             if (resultSet.next()) {
                 BrawlerNombre.setText(resultSet.getString("Brawler"));
+                nAspectos.setText(resultSet.getString("Aspectos"));
+                Origen.setText(resultSet.getString("Origen"));
+                Image Imagen = new Image("file:./src/main/resources/images/" + resultSet.getString("Brawler") + ".png");
+            imagenSeleccionada.setImage(Imagen);
             }
+
+            query = "SELECT Calidad FROM Calidades JOIN Brawlers ON Calidades.IdCalidad = Brawlers.IdCalidad WHERE IdBrawler = ?";
+            statement = con.prepareStatement(query);
+            statement.setInt(1, brawlerId);
+            resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                Calidad.setValue(resultSet.getString("Calidad"));
+            }
+
+            query = "SELECT Mapa FROM Mapas JOIN Brawlers ON Mapas.IdMapa = Brawlers.IdMapa WHERE IdBrawler = ?";
+            statement = con.prepareStatement(query);
+            statement.setInt(1, brawlerId);
+            resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                MejorMapa.setValue(resultSet.getString("Mapa"));
+            }
+
+            
 
             statement.close();
             resultSet.close();

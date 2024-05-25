@@ -50,7 +50,7 @@
       </Label>
       <TextArea fx:id="Origen" layoutX="212.0" layoutY="268.0" prefHeight="112.0" prefWidth="350.0" wrapText="true" />
       <Button fx:id="btnSeleccionarImagen" layoutX="416.0" layoutY="76.0" onAction="#seleccionarImagen" text="Seleccionar Imagen" />
-      <ImageView fx:id="imagenSeleccionada" fitHeight="100.0" fitWidth="100.0" layoutX="462.0" layoutY="103.0" />
+      <ImageView fx:id="imagenSeleccionada" fitHeight="145.0" fitWidth="134.0" layoutX="421.0" layoutY="119.0" />
       <AnchorPane layoutX="-1.0" layoutY="-4.0">
          <children>
             <ImageView fitHeight="30.0" fitWidth="35.0" layoutY="4.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
@@ -64,7 +64,10 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <Button fx:id="Boton" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#volverAPrincipal" opacity="0.0" prefHeight="30.0" prefWidth="30.0" />
+            <Button fx:id="Boton" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#volverAPrincipal" opacity="0.0" prefHeight="30.0" prefWidth="30.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
          </children>
       </AnchorPane>
       <Button layoutX="57.0" layoutY="309.0" mnemonicParsing="false" onAction="#modificarBrawler" prefHeight="43.0" prefWidth="92.0" text="Modificar">

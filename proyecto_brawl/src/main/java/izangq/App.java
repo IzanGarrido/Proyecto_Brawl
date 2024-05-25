@@ -46,7 +46,7 @@ public class App extends Application {
     public static void iniciarSesion() throws IOException {
         stage.setTitle("Iniciar Sesión");
         Parent root = loadFXML("iniciaSesion");
-        Scene scene = new Scene(root/*, 350, 270*/);
+        Scene scene = new Scene(root, 350, 270);
         stage.setScene(scene);
     }
 

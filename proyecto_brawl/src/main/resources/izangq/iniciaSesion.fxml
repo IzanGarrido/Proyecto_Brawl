@@ -31,7 +31,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="Registrarse" layoutX="222.0" layoutY="199.0" onMouseClicked="#GoToRegistrarse" prefHeight="30.0" prefWidth="85.0" text="Registrarse." textFill="BLUE" underline="true">
+      <Label fx:id="Registrarse" layoutX="222.0" layoutY="199.0" onMouseClicked="#GoToRegistrarse" prefHeight="30.0" prefWidth="85.0" style="-fx-text-fill: blue;" text="Registrarse." textFill="BLUE" underline="true">
          <font>
             <Font size="16.0" />
          </font>
